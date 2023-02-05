@@ -48,7 +48,7 @@ export const SpecialPool = [
     }
 ]
 
-const Pool1 = [
+export const Pool1 = [
     {
         name: '蒙奇D路飞',
         type: 1,
@@ -97,7 +97,7 @@ const Pool1 = [
     },
 ]
 
-const Pool2 = [
+export const Pool2 = [
     {
         name: '波特卡斯D艾斯',
         type: 2,
@@ -165,7 +165,7 @@ const Pool2 = [
     },
 ]
 
-const Pool3 = [
+export const Pool3 = [
     {
         name: '蒙奇D路飞 二档',
         type: 3,
@@ -333,7 +333,7 @@ const Pool3 = [
     }
 ]
 
-const Pool4 = [
+export const Pool4 = [
     {
         name: '蒙奇D路飞 三档',
         type: 4,

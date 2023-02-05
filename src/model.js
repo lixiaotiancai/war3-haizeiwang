@@ -10,7 +10,9 @@ const myPool = {};
  * @return {*} 
  */
 function getHeroByName(name) {
-    return HeroPool.find(item => item.name === name);
+    const hero = HeroPool.find(item => item.name === name);
+
+    return hero;
 }
 
 /**
@@ -95,19 +97,60 @@ export function getMyPool() {
  *
  * @param {*} hero
  */
-export function getUpTreeByHero(hero, tree) {
-    if (!tree) {
-        tree = {};
-    }
+export function getUpTreeByHero(hero, tree = {}) {
+    tree[hero.name] = hero; 
+    tree[hero.name].child = {}
 
-    if (!hero.need || !hero.need.length) return tree;
+    if (!hero?.need?.length) {
+        return;
+    };
 
-    tree[hero.name] = hero;
-
-    tree[hero.name].need.forEach(subHero => {
-        const child = getHeroByName(subHero.name);
-        getUpTreeByHero(child, tree);
+    tree[hero.name].need.forEach(subHeroName => {
+        const child = getHeroByName(subHeroName);
+        getUpTreeByHero(child, tree[hero.name].child);
     })
+
+    return tree;
+}
+
+/**
+ * 获取英雄与当前阵容的匹配度
+ *
+ * @export
+ * @param {*} tree
+ * @param {number} [weight=0]
+ * @return {*} 
+ */
+export function getMatchedWeightByTree(tree, weightPool = [0, 0]) {
+    const content = Object.values(tree)?.[0];
+
+    if (!content?.child) return;
+
+    Object.values(content.child).forEach(child => {
+        if (myPool[child.name]) {
+            weightPool.push(child.weight);
+        }   
+        getMatchedWeightByTree(child.child, weightPool);
+    })
+
+    const weight = weightPool.reduce((a, b) => a + b);
+
+    return weight;
+}
+
+/**
+ * 获取权重
+ *
+ * @export
+ * @param {*} hero
+ * @return {*} 
+ */
+export function getMatchedWeightByHero(hero) {
+    console.log('我的英雄池', myPool)
+    const tree = getUpTreeByHero(hero);
+    const weight = getMatchedWeightByTree(tree);
+
+    return weight;
 }
 
 /**
@@ -116,6 +159,6 @@ export function getUpTreeByHero(hero, tree) {
  *
  * @export
  */
-export function getRecommendUpTree() {
+export function getMatchedUpTree() {
 
 }
