@@ -44,7 +44,8 @@ export const HeroType = {
 export const SpecialPool = [
     {
         name: '古船',
-        type: 0
+        type: 0,
+        need: []
     }
 ]
 

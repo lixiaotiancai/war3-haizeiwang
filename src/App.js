@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { Pool1, Pool2} from './data';
-import { addHero, getMatchedWeightByHero, getMatchhedWeightByHero, getUpTreeByHero,  } from './model';
+import { Pool1, Pool2, Pool4, Pool5} from './data';
+import { addHero, getMatchedUpTree, getMatchedWeightByHero, getMatchhedWeightByHero, getUpTreeByHero,  } from './model';
 import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    Pool1.forEach((hero) => addHero(hero));
-    Pool2.forEach(hero => addHero(hero));
+    Pool1.forEach(hero => addHero(hero))
 
     const weight = getMatchedWeightByHero({
       name: '烬 百兽海贼团 大看板',
@@ -24,6 +23,9 @@ function App() {
     })
 
     console.log('合成树:', tree)
+
+    const matched = getMatchedUpTree();
+    console.log('推荐前10匹配的合成树', matched)
 
   }, [])
 

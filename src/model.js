@@ -1,4 +1,4 @@
-import { HeroPool, Pool5 } from './data';
+import { HeroPool, Pool5, SpecialPool } from './data';
 
 const myPool = {};
 
@@ -13,6 +13,16 @@ function getHeroByName(name) {
     const hero = HeroPool.find(item => item.name === name);
 
     return hero;
+}
+
+/**
+ * 是否为特殊池子
+ *
+ * @param {*} name
+ * @return {*} 
+ */
+export function isSpecialHero(name) {
+    return SpecialPool.find(item => item.name === name);
 }
 
 /**
@@ -98,6 +108,8 @@ export function getMyPool() {
  * @param {*} hero
  */
 export function getUpTreeByHero(hero, tree = {}) {
+    if (!hero) return;
+
     tree[hero.name] = hero; 
     tree[hero.name].child = {}
 
@@ -129,8 +141,9 @@ export function getMatchedWeightByTree(tree, weightPool = [0, 0]) {
     Object.values(content.child).forEach(child => {
         if (myPool[child.name]) {
             weightPool.push(child.weight);
-        }   
-        getMatchedWeightByTree(child.child, weightPool);
+        } else {
+            getMatchedWeightByTree(child.child, weightPool);
+        }
     })
 
     const weight = weightPool.reduce((a, b) => a + b);
@@ -146,7 +159,6 @@ export function getMatchedWeightByTree(tree, weightPool = [0, 0]) {
  * @return {*} 
  */
 export function getMatchedWeightByHero(hero) {
-    console.log('我的英雄池', myPool)
     const tree = getUpTreeByHero(hero);
     const weight = getMatchedWeightByTree(tree);
 
@@ -160,5 +172,19 @@ export function getMatchedWeightByHero(hero) {
  * @export
  */
 export function getMatchedUpTree() {
+    const pool = [...Pool5];
+    let list = [];
 
+    // 先暴力枚举
+    pool.forEach(hero => {
+        const weight = getMatchedWeightByHero(hero);
+
+        list.push({
+            weight,
+            hero,
+        })
+    })
+
+    list = list.sort((a, b) => b.weight - a.weight).slice(0, 9);
+    return list;
 }
