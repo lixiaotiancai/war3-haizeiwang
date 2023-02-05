@@ -224,6 +224,81 @@ const Pool3 = [
         type: 3,
         need: ['依玛祖娜', '依玛祖娜']
     },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
+    {
+        name: '',
+        type: 3,
+        need: ['', '', '']
+    },
 ]
 
 const Pool4 = [
