@@ -187,8 +187,6 @@ export function getMatchedUpTree() {
         })
     })
 
-    console.log(list)
-
-    list = list.sort((a, b) => b.weight - a.weight).slice(0, 9);
+    list = list.sort((a, b) => b.weight - a.weight).slice(0, 4);
     return list;
 }

@@ -19,9 +19,11 @@ function App() {
   const [searchList, setSearchList] = useState("");
   const [fresh, setFresh] = useState(false);
   const [recommand, setRecommand] = useState([]);
+  const [wantHero, setWantHero] = useState(null);
 
   useEffect(() => {
     setPool(getMyPool());
+    setRecommand(getMatchedUpTree());
   }, [fresh])
 
   // useEffect(() => {
@@ -48,6 +50,10 @@ function App() {
 
   // }, [])
 
+  const want = (hero) => {
+    setWantHero(hero);
+  }
+
   const onInputChange = (e) => {
     setInput(e.target.value);
     const list = getSearchList(e.target.value);
@@ -56,15 +62,11 @@ function App() {
 
   const add = (hero) => {
     addHero(hero);
-    setPool(getMyPool());
-    setRecommand(getMatchedUpTree())
     setFresh(!fresh)
   };
 
   const remove = (hero) => {
     removeHero(hero);
-    setPool(getMyPool());
-    setRecommand(getMatchedUpTree())
     setFresh(!fresh)
   };
 
@@ -88,16 +90,34 @@ function App() {
                     -
                   </a>
                 </p>
-                <div className="want">想要</div>
+                <div className="want" onClick={() => want(hero)}>想要</div>
               </div>
             );
           })}
         </div>
       ) : null}
 
+      <p>想要：</p>
+      {wantHero ? (
+        <div>
+          <div>{wantHero.name}</div>
+          <a style={{color: 'blue', fontSize: '12px'}} onClick={() => want(null)}>不要了</a>
+        </div>) : null}
+  
+
       <p>推荐: </p>
 
-      <div></div>
+      {recommand.length ? (
+        <div>
+          {recommand.map(item => {
+            return (
+              <div style={{border: '1px solid #999', marginBottom: '12px'}}>
+                <div key={item.hero.name}>{item.hero.name}</div>
+              </div>
+            )
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }
