@@ -1,4 +1,4 @@
-import { HeroPool } from './data';
+import { HeroPool, Pool5 } from './data';
 
 const myPool = {};
 
@@ -77,4 +77,14 @@ export function removeHeroByTimes(hero, times) {
  */
 export function getMyPool() {
     return myPool;
+}
+
+/**
+ * 获取推荐英雄进化树
+ * 默认推荐传说以上的合成树
+ *
+ * @export
+ */
+export function getRecommendUpTree() {
+
 }

@@ -546,7 +546,7 @@ const Pool4 = [
     }
 ]
 
-const Pool5 = [
+export const Pool5 = [
     {
         name: '月光莫利亚 影之集合地',
         type: 5,
@@ -729,12 +729,20 @@ const Pool5 = [
     },
 ]
 
-const Pool6 = [
+export const Pool6 = [
     
 ]
 
-const Pool7 = [
+export const Pool7 = [
 
 ]
+
+Pool1.weight = 1;
+Pool2.weight = 100;
+Pool3.weight = 10000;
+Pool4.weight = 1000000;
+Pool5.weight = 100000000;
+Pool6.weight = 100000000;
+Pool7.weight = 10000000000;
 
 export const HeroPool = [...SpecialPool, ...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5, ...Pool6, ...Pool7];
