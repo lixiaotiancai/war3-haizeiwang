@@ -737,4 +737,4 @@ const Pool7 = [
 
 ]
 
-export const zHeroPool = [...SpecialPool, ...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5, ...Pool6, ...Pool7];
+export const HeroPool = [...SpecialPool, ...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5, ...Pool6, ...Pool7];
