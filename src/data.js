@@ -18,8 +18,26 @@ export const HeroType = {
     5: {
         name: '传说',
         color: 'red'
+    },
+    6: {
+        name: '隐藏',
+        color: 'grey'
+    },
+    7: {
+        name: '超凡',
+        color: 'blue'
+    },
+    8: {
+        name: '不朽',
+        color: 'gold'
+    },
+    9: {
+        name: '永恒',
+        color: 'black'
     }
-} 
+}
+
+export const SpecialMap = [];
 
 const Pool1 = [
     {
@@ -516,11 +534,198 @@ const Pool4 = [
         name: 'X德雷克 异特龙',
         type: 4,
         need: ['X德雷克', '巴兹尔霍金斯', '恶龙鱼人海贼团船长']
-    },
+    }
 ]
 
 const Pool5 = [
+    {
+        name: '月光莫利亚 影之集合地',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '蒙奇D路飞 噩梦',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '甚平 前任七武海鱼人族首领',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '斯摩格 专注的海军中将',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '蒙奇D龙 世界最凶恶的罪犯',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '波雅汉库克 九蛇海贼团船长',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '史基 金狮子',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '战国 原海军元帅',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '香克斯 四皇红发',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '爱德华纽盖特 四皇白胡子海贼团的父亲',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '文斯莫克蕾玖 绯红剧毒',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '卡尔加拉 香狄亚大战士',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '拉布 越过红土大陆的鲸鱼',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '巴托洛米奥 新锐超新星 食人鬼',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '罗罗诺亚索隆 死亡领域 狮子歌歌',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '罗布路奇 生命归还',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '山治 黑足西装套',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '克比 改变世界命运的海军新秀',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '滕虎一生 神海军队长',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '蒙奇D路飞 二档喷射机关枪',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '天月时 时间旅行者',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '马尔高 幻兽种 不死鸟',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '润 飞六胞',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: 'Dr.希鲁鲁克 治国医生',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '猫蝮蛇 黑夜之王',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '特拉法尔加罗 心脏海贼团船长',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '哥尔D艾斯 海贼王的儿子',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '泽法 原海军队长 黑腕',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '凯撒库朗 疯狂的科学家',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '娜美 小贼猫',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '马歇尔D蒂奇 黑胡子海贼团船长 黑胡子',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '巴索罗缪熊 暴君',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '夏洛特克力架 BIG MOM三将星',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '阿忍 迷人女忍者',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '烬 百兽海贼团 大看板',
+        type: 5,
+        need: ['', '', '']
+    },
+    {
+        name: '西尔巴兹雷利 罗杰海贼团副船长',
+        type: 5,
+        need: ['', '', '']
+    },
+]
+
+const Pool6 = [
     
 ]
 
-export const zHeroPool = [...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5];
+const Pool7 = [
+
+]
+
+export const zHeroPool = [...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5, ...Pool6, ...Pool7];
