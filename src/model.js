@@ -128,6 +128,41 @@ export function getUpTreeByHero(hero, tree = {}) {
 }
 
 /**
+ * 获取进化树文字指引
+ *
+ * @export
+ * @param {*} hero
+ */
+export function getHeroUpTreeWordingBox(hero) {
+    const tree = getUpTreeByHero(hero);
+
+    return getWordingByTree(tree)
+}
+
+/**
+ * 获取进化树文字指引
+ *
+ * @param {*} tree
+ * @param {*} [wording=[]]
+ */
+function getWordingByTree(tree, wording = []) {
+    const content = Object.values(tree)?.[0];
+
+    if (!content?.need?.length) return;
+
+    const w =  content.name + ' = ' + content.need.join(' + ');
+    wording.push(w);
+
+    Object.values(content.child).forEach(child => {
+        getWordingByTree(child.child, wording);
+    })
+
+    const result = wording.reverse();
+
+    return result;
+}
+
+/**
  * 获取英雄与当前阵容的匹配度
  *
  * @export
@@ -152,6 +187,7 @@ export function getMatchedWeightByTree(tree, weightPool = [0, 0]) {
 
     return weight;
 }
+
 
 /**
  * 获取权重

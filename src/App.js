@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Pool1, Pool2, Pool4, Pool5 } from "./data";
 import {
   addHero,
+  getHeroUpTreeWordingBox,
   getMatchedUpTree,
-  getMatchedWeightByHero,
-  getMatchhedWeightByHero,
   getMyPool,
   getSearchList,
-  getUpTreeByHero,
   removeHero,
 } from "./model";
 import { useEffect, useState } from "react";
@@ -99,8 +95,15 @@ function App() {
 
       <p>想要：</p>
       {wantHero ? (
-        <div>
+        <div style={{border: '1px green solid'}}>
           <div>{wantHero.name}</div>
+          <div>
+            {getHeroUpTreeWordingBox(wantHero).map(item => {
+              return(
+                <p style={{margin: '4px 0'}}>{item}</p>
+              )
+            })}
+          </div>
           <a style={{color: 'blue', fontSize: '12px'}} onClick={() => want(null)}>不要了</a>
         </div>) : null}
   
@@ -113,6 +116,13 @@ function App() {
             return (
               <div style={{border: '1px solid #999', marginBottom: '12px'}}>
                 <div key={item.hero.name}>{item.hero.name}</div>
+                <div>
+                  {getHeroUpTreeWordingBox(item.hero).map(item => {
+                    return(
+                      <p style={{margin: '4px 0'}}>{item}</p>
+                    )
+                  })}
+                </div>
               </div>
             )
           })}
