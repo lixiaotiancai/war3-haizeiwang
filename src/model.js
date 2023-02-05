@@ -33,7 +33,8 @@ export function isSpecialHero(name) {
  * @return {*} 
  */
 export function getSearchList(name) {
-    return HeroPool.find((item) => item.name.includes(name));
+    if (!name) return []
+    return HeroPool.filter((item) => item.name.includes(name));
 }
 
 /**

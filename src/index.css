@@ -13,6 +13,42 @@ code {
     monospace;
 }
 
-p {
-  color: red;
+
+.select-box {
+  border: 1px solid;
+}
+
+.select-item {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid #999;
+  display: flex;
+}
+
+.small-font {
+  font-size: 14px;
+}
+
+.count {
+  display: flex;
+  margin-left: 20px;
+}
+
+.add {
+  margin-right: 8px;
+  display: flex;
+  border: 1px solid;
+  color: blue;
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.want {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: blue;
 }
