@@ -3,6 +3,17 @@ import { HeroPool, Pool5 } from './data';
 const myPool = {};
 
 /**
+ * 英雄名称精准搜索
+ *
+ * @export
+ * @param {*} name
+ * @return {*} 
+ */
+function getHeroByName(name) {
+    return HeroPool.find(item => item.name === name);
+}
+
+/**
  * 英雄名称模糊搜索
  *
  * @export
@@ -77,6 +88,26 @@ export function removeHeroByTimes(hero, times) {
  */
 export function getMyPool() {
     return myPool;
+}
+
+/**
+ * 递归构建英雄主义进化树
+ *
+ * @param {*} hero
+ */
+export function getUpTreeByHero(hero, tree) {
+    if (!tree) {
+        tree = {};
+    }
+
+    if (!hero.need || !hero.need.length) return tree;
+
+    tree[hero.name] = hero;
+
+    tree[hero.name].need.forEach(subHero => {
+        const child = getHeroByName(subHero.name);
+        getUpTreeByHero(child, tree);
+    })
 }
 
 /**

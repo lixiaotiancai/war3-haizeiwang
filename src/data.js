@@ -737,6 +737,7 @@ export const Pool7 = [
 
 ]
 
+SpecialPool.weight = 0;
 Pool1.weight = 1;
 Pool2.weight = 100;
 Pool3.weight = 10000;
@@ -746,3 +747,8 @@ Pool6.weight = 100000000;
 Pool7.weight = 10000000000;
 
 export const HeroPool = [...SpecialPool, ...Pool1, ...Pool2, ...Pool3, ...Pool4, ...Pool5, ...Pool6, ...Pool7];
+
+// 增加权重
+[SpecialPool, Pool1, Pool2, Pool3, Pool4, Pool5, Pool6, Pool7].forEach(pool => {
+    pool.forEach(item => item.weight = pool.weight)
+})
