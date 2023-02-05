@@ -318,197 +318,202 @@ const Pool4 = [
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '索隆 赏金猎人',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '乔拉可尔米霍克',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '波雅汉库克',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '克洛克达尔Mr.0 Sir',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '薇薇 Miss Wednesday',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: 'Bady-5 八宝水军',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '战桃丸 海军科学部队队长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '卡普 海军英雄',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '麦哲伦 毒毒果实能力者',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '鼹鼠 G1 支部首领',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '马歇尔D蒂奇 白胡子海贼团叛徒',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '萨卡斯基 海军队长 赤犬',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '库赞 海军队长 青稚',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '波鲁萨利诺 海军队长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '卡库 CP9 牛牛果实 周断',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '特拉法尔加罗 死亡外科医生',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '巴杰斯 黑胡子海贼团船员',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '巴兹尔霍金斯 稻草人',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '魔人奥兹 大陆破坏者',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '剑豪马龙',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '佩罗娜 灵灵果实-消极',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '砂糖 多弗朗明哥最高干部',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '布鲁克 骷髅音乐家',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '多弗朗明哥 七武海',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '托尼托尼乔巴 角力强化',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '香克斯 红发海贼团船长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '本贝克曼 红发海贼团副船长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '乌索普 波音列岛幸存者',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '安步里奥伊万科夫',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '萨博 革命军参谋',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '马尔高 白胡子第一队队长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '乔兹 白胡子第三队队长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '巴托洛米奥 草帽海贼团疯狂粉丝',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '范德戴肯 飞翔的荷兰人号船长',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '瓦帕 空岛战鬼',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '哲普 海上餐厅 师父',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '尤斯塔斯基德 船长-基德',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '锦卫门 和之国的武士',
         type: 4,
         need: ['', '', '']
     },
     {
-        name: '',
+        name: '希留 原推进城看守长',
+        type: 4,
+        need: ['', '', '']
+    },
+    {
+        name: 'X德雷克 异特龙',
         type: 4,
         need: ['', '', '']
     },
