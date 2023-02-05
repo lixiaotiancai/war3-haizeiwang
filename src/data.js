@@ -8,8 +8,16 @@ const HeroType = {
         color: 'purple'
     },
     3: {
-        name: '特别'
-
+        name: '特别',
+        color: 'yellow'
+    },
+    4: {
+        name: '稀有',
+        color: 'pink'
+    },
+    5: {
+        name: '传说',
+        color: 'red'
     }
 } 
 
