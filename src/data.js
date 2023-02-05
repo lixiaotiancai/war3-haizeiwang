@@ -23,6 +23,49 @@ const HeroType = {
 
 export const HeroPool = [
     {
-        name: 
-    }
+        name: '蒙奇D路飞',
+        type: 1,
+        need: []
+    },
+    {
+        name: '娜美',
+        type: 1,
+        need: []
+    },
+    {
+        name: '罗罗亚索索隆',
+        type: 1,
+        need: []
+    },
+    {
+        name: '乌索普',
+        type: 1,
+        need: []
+    },
+    {
+        name: '海军剑兵',
+        type: 1,
+        need: []
+    },
+    {
+        name: '海军炮兵',
+        type: 1,
+        need: []
+    },
+    {
+        name: '巴基',
+        type: 1,
+        need: []
+    },
+    {
+        name: '山治',
+        type: 1,
+        need: []
+    },
+
+    {
+        name: '托尼托尼乔巴',
+        type: 1,
+        need: []
+    },
 ]
