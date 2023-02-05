@@ -18,6 +18,7 @@ function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState("");
   const [fresh, setFresh] = useState(false);
+  const [recommand, setRecommand] = useState([]);
 
   useEffect(() => {
     setPool(getMyPool());
@@ -50,20 +51,20 @@ function App() {
   const onInputChange = (e) => {
     setInput(e.target.value);
     const list = getSearchList(e.target.value);
-    console.log(list);
     setSearchList(list || []);
   };
 
   const add = (hero) => {
-    console.log(hero)
     addHero(hero);
     setPool(getMyPool());
+    setRecommand(getMatchedUpTree())
     setFresh(!fresh)
   };
 
   const remove = (hero) => {
     removeHero(hero);
     setPool(getMyPool());
+    setRecommand(getMatchedUpTree())
     setFresh(!fresh)
   };
 

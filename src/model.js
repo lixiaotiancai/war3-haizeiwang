@@ -43,14 +43,15 @@ export function getSearchList(name) {
  * @export
  * @param {*} hero
  */
-export function addHero(hero) {
-    if (!myPool[hero.name]) {
-        myPool[hero.name] = {
+export function addHero(hero, p = myPool) {
+
+    if (!p[hero.name]) {
+        p[hero.name] = {
             ...hero,
             count: 1,
         }
     } else {
-        myPool[hero.name].count = myPool[hero.name].count + 1;
+        p[hero.name].count = p[hero.name].count + 1;
     }
 }
 
@@ -141,7 +142,7 @@ export function getMatchedWeightByTree(tree, weightPool = [0, 0]) {
 
     Object.values(content.child).forEach(child => {
         if (myPool[child.name]) {
-            weightPool.push(child.weight);
+            weightPool.push(content.weight);
         } else {
             getMatchedWeightByTree(child.child, weightPool);
         }
@@ -185,6 +186,8 @@ export function getMatchedUpTree() {
             hero,
         })
     })
+
+    console.log(list)
 
     list = list.sort((a, b) => b.weight - a.weight).slice(0, 9);
     return list;
